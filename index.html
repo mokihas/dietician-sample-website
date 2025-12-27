@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Ananya Sharma | Certified Dietician & Nutritionist</title>
+    <meta name="description" content="Personalised nutrition plans for weight loss, PCOS, diabetes, thyroid & hormonal balance. Get expert diet consultation from certified dietician Dr. Ananya Sharma.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #88B788;
+            --primary-dark: #6A9972;
+            --primary-light: #E8F3E8;
+            --secondary: #F5D5CB;
+            --secondary-light: #FBEAE7;
+            --white: #FFFFFF;
+            --off-white: #F9F7F5;
+            --text: #333333;
+            --text-light: #666666;
+            --shadow: rgba(136, 183, 136, 0.1);
+            --radius: 16px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--off-white);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-light);
+            color: var(--text);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.2);
+        }
+
+        .btn-small {
+            padding: 0.5rem 1.25rem;
+            font-size: 0.9rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--white);
+            box-shadow: 0 2px 20px var(--shadow);
+            z-index: 1000;
+            padding: 0.75rem 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        /* Desktop Navigation */
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            bottom: 0;
+            left: 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        .header-btns {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        /* Mobile Navigation */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 320px;
+            height: 100vh;
+            background-color: var(--white);
+            box-shadow: -5px 0 20px var(--shadow);
+            padding: 5rem 2rem 2rem;
+            transition: var(--transition);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .mobile-nav.active {
+            right: 0;
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .mobile-nav-links a {
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #eee;
+            color: var(--text);
+        }
+
+        .mobile-nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .mobile-header-btns {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .mobile-header-btns .btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 8rem;
+            padding-bottom: 5rem;
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--white) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+
+        .hero h1 span {
+            color: var(--primary-dark);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            color: var(--text-light);
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: var(--radius) 0 0 var(--radius);
+            z-index: 1;
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 15px 30px var(--shadow);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-text h2 {
+            text-align: left;
+        }
+
+        .about-text h2:after {
+            left: 0;
+            transform: none;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--primary-light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px var(--shadow);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Testimonials Section - Enhanced Card Slider */
+        .testimonials {
+            background-color: var(--white);
+            overflow: hidden;
+        }
+
+        .testimonials-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .testimonials-slider {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius);
+        }
+
+        .testimonials-track {
+            display: flex;
+            transition: transform 0.5s ease;
+            gap: 2rem;
+            padding: 1rem 0;
+        }
+
+        .testimonial-slide {
+            min-width: calc(100% - 40px);
+            flex: 0 0 calc(100% - 40px);
+            padding: 0.5rem;
+            box-sizing: border-box;
+        }
+
+        @media (min-width: 768px) {
+            .testimonial-slide {
+                min-width: calc(50% - 20px);
+                flex: 0 0 calc(50% - 20px);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .testimonial-slide {
+                min-width: calc(33.333% - 20px);
+                flex: 0 0 calc(33.333% - 20px);
+            }
+        }
+
+        .testimonial-card {
+            background-color: var(--off-white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(136, 183, 136, 0.1);
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(136, 183, 136, 0.15);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-light);
+            box-shadow: 0 5px 15px rgba(136, 183, 136, 0.1);
+            flex-shrink: 0;
+        }
+
+        .testimonial-info {
+            flex: 1;
+        }
+
+        .testimonial-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+            color: var(--primary-dark);
+        }
+
+        .testimonial-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+
+        .rating {
+            color: #FFC107;
+            margin-bottom: 1.25rem;
+            font-size: 1rem;
+        }
+
+        .rating i {
+            margin-right: 0.1rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text);
+            line-height: 1.7;
+            flex-grow: 1;
+            position: relative;
+            padding: 0 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .testimonial-text:before {
+            content: '"';
+            position: absolute;
+            left: -0.5rem;
+            top: -0.5rem;
+            font-size: 2.5rem;
+            color: var(--primary);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-text:after {
+            content: '"';
+            position: absolute;
+            right: -0.5rem;
+            bottom: -1.5rem;
+            font-size: 2.5rem;
+            color: var(--primary);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        /* Slider Controls - Enhanced */
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .slider-btn {
+            background-color: var(--white);
+            color: var(--primary-dark);
+            border: 2px solid var(--primary-light);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+
+        .slider-btn:hover {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .slider-dots {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--secondary);
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .slider-dot.active {
+            background-color: var(--primary);
+            transform: scale(1.2);
+        }
+
+        /* Why Choose Us Section */
+        .why-us {
+            background-color: var(--primary-light);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            border-radius: var(--radius);
+            background-color: var(--white);
+            transition: var(--transition);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px var(--shadow);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Location Section */
+        .location {
+            background-color: var(--white);
+        }
+
+        .map-container {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow);
+            height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--primary-light);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-btns {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .contact-details {
+            background-color: var(--off-white);
+            padding: 2rem;
+            border-radius: var(--radius);
+        }
+
+        .contact-details h3 {
+            margin-bottom: 1.5rem;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .detail-icon {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+        }
+
+        .contact-form {
+            background-color: var(--off-white);
+            padding: 2.5rem;
+            border-radius: var(--radius);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(136, 183, 136, 0.2);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .footer-contact {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-contact a {
+            color: white;
+            transition: var(--transition);
+        }
+
+        .footer-contact a:hover {
+            color: var(--secondary-light);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 0.95rem;
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin-top: 1rem;
+        }
+
+        .copyright p {
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content, .contact-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .hero-image {
+                position: relative;
+                width: 100%;
+                height: 400px;
+                transform: none;
+                top: 0;
+                margin-top: 3rem;
+                border-radius: var(--radius);
+            }
+            
+            .hero {
+                padding-top: 7rem;
+            }
+            
+            .testimonials-container {
+                padding: 0 15px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 2rem;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .header-btns {
+                display: none;
+            }
+            
+            .testimonial-slide {
+                min-width: calc(100% - 30px);
+                flex: 0 0 calc(100% - 30px);
+            }
+            
+            .testimonial-card {
+                padding: 1.75rem;
+            }
+            
+            .testimonial-img {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .slider-controls {
+                gap: 1.5rem;
+                margin-top: 2.5rem;
+            }
+            
+            .slider-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .footer-social {
+                justify-content: center;
+            }
+            
+            .footer-contact {
+                justify-content: center;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .header-btns {
+                gap: 0.5rem;
+            }
+            
+            .header-btns .btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.85rem;
+            }
+            
+            .testimonial-slide {
+                min-width: calc(50% - 15px);
+                flex: 0 0 calc(50% - 15px);
+            }
+        }
+
+        @media (max-width: 576px) {
+            section {
+                padding: 3.5rem 0;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+            }
+            
+            .hero-btns .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .services-grid, .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form {
+                padding: 1.5rem;
+            }
+            
+            .copyright {
+                padding: 1.25rem;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .footer-social {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .header {
+                padding: 0.6rem 0;
+            }
+            
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+            
+            .testimonial-header {
+                gap: 1rem;
+                margin-bottom: 1.25rem;
+            }
+            
+            .testimonial-img {
+                width: 55px;
+                height: 55px;
+            }
+            
+            .slider-controls {
+                margin-top: 2rem;
+            }
+            
+            .slider-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            
+            .testimonials-container {
+                padding: 0 10px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .logo {
+                font-size: 1.3rem;
+            }
+            
+            .mobile-nav {
+                width: 85%;
+            }
+            
+            .testimonial-card {
+                padding: 1.25rem;
+            }
+            
+            .testimonial-img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#home" class="logo">Dr.<span>Ananya</span></a>
+            
+            <!-- Desktop Navigation -->
+            <div class="desktop-nav">
+                <nav class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#why-us">Why Choose Us</a>
+                    <a href="#location">Location</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                
+                
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <nav class="mobile-nav-links">
+                <a href="#home" class="mobile-nav-link">Home</a>
+                <a href="#about" class="mobile-nav-link">About</a>
+                <a href="#services" class="mobile-nav-link">Services</a>
+                <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
+                <a href="#why-us" class="mobile-nav-link">Why Choose Us</a>
+                <a href="#location" class="mobile-nav-link">Location</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+            </nav>
+            
+            <div class="mobile-header-btns">
+                <a href="https://wa.me/919876543210" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Consultation
+                </a>
+                <a href="tel:+919876543210" class="btn btn-primary">
+                    <i class="fas fa-phone-alt"></i> Call Now
+                </a>
+            </div>
+        </div>
+        
+        <!-- Overlay for mobile menu -->
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Personalised Nutrition & <span>Diet Consultation</span></h1>
+                <p>Expert guidance for weight loss, PCOS/PCOD, diabetes, gut health, and hormonal balance. Start your journey to a healthier, happier you with science-based nutrition plans.</p>
+                <div class="hero-btns">
+                    <a href="https://wa.me/919876543210" class="btn btn-primary">
+                        <i class="fab fa-whatsapp"></i> WhatsApp for Consultation
+                    </a>
+                    <a href="tel:+919876543210" class="btn btn-secondary">
+                        <i class="fas fa-phone-alt"></i> Call Now
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Dr. Ananya Sharma - Certified Dietician">
+                </div>
+                <div class="about-text">
+                    <h2>Dr. Ananya Sharma</h2>
+                    <h3>Certified Dietician & Nutritionist</h3>
+                    <p>With over 8 years of experience in clinical nutrition and dietetics, I specialize in creating personalized diet plans that work with your lifestyle, food preferences, and health goals.</p>
+                    <p>My approach is rooted in scientific evidence, yet tailored to the unique dietary needs and cultural context of Indian women. I believe in sustainable changes rather than quick fixes, empowering you to take control of your health for the long term.</p>
+                    <p>Whether you're managing a specific condition like PCOS or diabetes, or simply want to adopt a healthier lifestyle, I'm here to guide you every step of the way with compassion and expertise.</p>
+                    <div class="contact-btns">
+                        <a href="https://wa.me/919876543210" class="btn btn-whatsapp btn-small">
+                            <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-weight-scale"></i>
+                    </div>
+                    <h3>Weight Loss</h3>
+                    <p>Personalized weight management plans focusing on sustainable fat loss, metabolic health, and lifestyle modification without extreme diets.</p>
+                    <a href="https://wa.me/919876543210?text=Hi,%20I'm%20interested%20in%20Weight%20Loss%20consultation" class="btn btn-secondary btn-small">Enquire on WhatsApp</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <h3>PCOS / PCOD Nutrition</h3>
+                    <p>Evidence-based dietary strategies to manage PCOS symptoms, improve insulin sensitivity, and restore hormonal balance naturally.</p>
+                    <a href="https://wa.me/919876543210?text=Hi,%20I'm%20interested%20in%20PCOS/PCOD%20Nutrition%20consultation" class="btn btn-secondary btn-small">Enquire on WhatsApp</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Diabetes Diet</h3>
+                    <p>Customized meal planning for blood sugar control, preventing complications, and improving overall metabolic health in type 1 & type 2 diabetes.</p>
+                    <a href="https://wa.me/919876543210?text=Hi,%20I'm%20interested%20in%20Diabetes%20Diet%20consultation" class="btn btn-secondary btn-small">Enquire on WhatsApp</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Thyroid & Hormonal Balance</h3>
+                    <p>Nutritional support for thyroid disorders (hypothyroidism/hyperthyroidism) and hormonal imbalances to optimize energy and wellbeing.</p>
+                    <a href="https://wa.me/919876543210?text=Hi,%20I'm%20interested%20in%20Thyroid%20&%20Hormonal%20Balance%20consultation" class="btn btn-secondary btn-small">Enquire on WhatsApp</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Gut Health & Digestion</h3>
+                    <p>Dietary solutions for IBS, bloating, acidity, and other digestive issues to restore gut health and improve nutrient absorption.</p>
+                    <a href="https://wa.me/919876543210?text=Hi,%20I'm%20interested%20in%20Gut%20Health%20consultation" class="btn btn-secondary btn-small">Enquire on WhatsApp</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-medical"></i>
+                    </div>
+                    <h3>Online Consultation</h3>
+                    <p>Virtual diet consultations via video call for clients across India. Receive personalized plans and follow-ups from the comfort of your home.</p>
+                    <a href="https://wa.me/919876543210?text=Hi,%20I'm%20interested%20in%20Online%20Consultation" class="btn btn-secondary btn-small">Enquire on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section - Enhanced Card Slider -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Client Testimonials</h2>
+            <div class="testimonials-container">
+                <div class="testimonials-slider">
+                    <div class="testimonials-track" id="testimonialsTrack">
+                        <!-- Slide 1 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Priya Sharma" class="testimonial-img">
+                                    <div class="testimonial-info">
+                                        <h4>Priya Sharma</h4>
+                                        <p>Weight Loss, 6 months</p>
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="testimonial-text">
+                                    Lost 18 kgs in 6 months with sustainable diet plans. Dr. Ananya's personalized approach made all the difference. I never felt deprived and learned healthy eating habits for life!
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Neha Patel" class="testimonial-img">
+                                    <div class="testimonial-info">
+                                        <h4>Neha Patel</h4>
+                                        <p>PCOS Management, 4 months</p>
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="testimonial-text">
+                                    After struggling with PCOS for years, Dr. Ananya's diet plan helped regulate my cycles and reduce symptoms significantly. My energy levels have improved dramatically!
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Riya Mehta" class="testimonial-img">
+                                    <div class="testimonial-info">
+                                        <h4>Riya Mehta</h4>
+                                        <p>Diabetes Management, 8 months</p>
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="testimonial-text">
+                                    Dr. Ananya's diabetes management plan helped me reduce my HbA1c from 8.5 to 6.2 in just 8 months. The diet is delicious and easy to follow even with my busy schedule.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 4 - Fixed Image -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Anjali Desai" class="testimonial-img">
+                                    <div class="testimonial-info">
+                                        <h4>Anjali Desai</h4>
+                                        <p>Thyroid & Gut Health, 5 months</p>
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="testimonial-text">
+                                    Suffered from hypothyroidism and digestive issues for years. Dr. Ananya's holistic approach helped me reduce medication and improved my gut health beyond expectations.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 5 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Kavita Singh" class="testimonial-img">
+                                    <div class="testimonial-info">
+                                        <h4>Kavita Singh</h4>
+                                        <p>Post-pregnancy Weight Loss, 7 months</p>
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="testimonial-text">
+                                    Lost all my pregnancy weight and more while breastfeeding! Dr. Ananya created a safe, effective plan that ensured proper nutrition for both me and my baby.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slider Controls -->
+                <div class="slider-controls">
+                    <button class="slider-btn" id="prevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    
+                    <div class="slider-dots" id="sliderDots">
+                        <!-- Dots will be generated by JavaScript -->
+                    </div>
+                    
+                    <button class="slider-btn" id="nextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="why-us">
+        <div class="container">
+            <h2>Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Expert Guidance</h3>
+                    <p>Certified dietician with 8+ years of clinical experience and continuous education in the latest nutrition science.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Personalized Plans</h3>
+                    <p>No generic diets. Every plan is customized to your health goals, lifestyle, preferences, and medical conditions.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Holistic Approach</h3>
+                    <p>We address nutrition, lifestyle, sleep, and stress together for comprehensive, sustainable health improvement.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Continuous Support</h3>
+                    <p>Regular follow-ups and adjustments to your plan ensure you stay on track and achieve lasting results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+        <div class="container">
+            <h2>Our Clinic Location</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.189418675167!2d77.20685777640354!3d28.62866507566739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b741d057%3A0xcdee88e47393c3f1!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi%20110001!5e0!3m2!1sen!2sin!4v1687182382293!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-btns">
+                        <a href="https://wa.me/919876543210" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Message on WhatsApp
+                        </a>
+                        <a href="tel:+919876543210" class="btn btn-primary">
+                            <i class="fas fa-phone-alt"></i> Call Now
+                        </a>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <h3>Contact Details</h3>
+                        
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Clinic Address</h4>
+                                <p>123 Wellness Center, Connaught Place<br>New Delhi, Delhi 110001</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Working Hours</h4>
+                                <p>Monday - Saturday: 9:00 AM - 7:00 PM<br>Sunday: 10:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>contact@drananyasharma.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="Your Phone Number" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" placeholder="Briefly describe your health goals or concerns..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Dr. Ananya Sharma</div>
+                
+                <div class="footer-social">
+                    <a href="https://instagram.com/drananyasharma" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/drananyasharma" class="social-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/drananyasharma" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://youtube.com/drananyasharma" class="social-icon" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                
+                <div class="footer-contact">
+                    <a href="https://wa.me/919876543210">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="tel:+919876543210">
+                        <i class="fas fa-phone-alt"></i> Call Now
+                    </a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Dr. Ananya Sharma | Certified Dietician & Nutritionist. All rights reserved.</p>
+                <p>Website designed for better health and wellness.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        const overlay = document.getElementById('overlay');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        
+        function toggleMobileMenu() {
+            mobileNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : 'auto';
+            
+            // Change menu icon
+            if (mobileNav.classList.contains('active')) {
+                mobileMenuBtn.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        }
+        
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        
+        // Close mobile menu when clicking on overlay
+        overlay.addEventListener('click', toggleMobileMenu);
+        
+        // Close mobile menu when clicking on a link
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', toggleMobileMenu);
+        });
+        
+        // Contact Form Submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            
+            // Create WhatsApp message
+            const whatsappMessage = `Hi, I'm ${name}. My phone number is ${phone}. Message: ${message}`;
+            
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // Redirect to WhatsApp with the message
+            window.open(`https://wa.me/919876543210?text=${encodedMessage}`, '_blank');
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Show success message
+            alert('Thank you! You will now be redirected to WhatsApp to send your message.');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Update year in footer
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.querySelector('.copyright p');
+            if(yearSpan) {
+                yearSpan.innerHTML = yearSpan.innerHTML.replace('2023', new Date().getFullYear());
+            }
+            
+            // Highlight active navigation link on scroll
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav-links a');
+            
+            window.addEventListener('scroll', () => {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if(pageYOffset >= (sectionTop - 100)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if(link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+        
+        // Enhanced Testimonials Slider
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.getElementById('testimonialsTrack');
+            const slides = document.querySelectorAll('.testimonial-slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const dotsContainer = document.getElementById('sliderDots');
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+            let slidesPerView = 1;
+            
+            // Calculate slides per view based on screen width
+            function updateSlidesPerView() {
+                if (window.innerWidth >= 992) {
+                    slidesPerView = 3;
+                } else if (window.innerWidth >= 768) {
+                    slidesPerView = 2;
+                } else {
+                    slidesPerView = 1;
+                }
+            }
+            
+            // Initialize
+            updateSlidesPerView();
+            
+            // Create dots based on effective slides
+            function createDots() {
+                dotsContainer.innerHTML = '';
+                const effectiveSlides = Math.ceil(totalSlides / slidesPerView);
+                
+                for (let i = 0; i < effectiveSlides; i++) {
+                    const dot = document.createElement('button');
+                    dot.className = 'slider-dot';
+                    if (i === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => goToSlide(i * slidesPerView));
+                    dotsContainer.appendChild(dot);
+                }
+            }
+            
+            createDots();
+            const dots = document.querySelectorAll('.slider-dot');
+            
+            function updateSlider() {
+                const slideWidth = slides[0].offsetWidth + 32; // Include gap
+                track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+                
+                // Update dots
+                const currentDot = Math.floor(currentSlide / slidesPerView);
+                dots.forEach((dot, index) => {
+                    if (index === currentDot) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+            
+            function nextSlide() {
+                const maxSlide = totalSlides - slidesPerView;
+                if (currentSlide < maxSlide) {
+                    currentSlide += slidesPerView;
+                } else {
+                    currentSlide = 0; // Loop back to start
+                }
+                updateSlider();
+            }
+            
+            function prevSlide() {
+                if (currentSlide > 0) {
+                    currentSlide -= slidesPerView;
+                } else {
+                    const maxSlide = totalSlides - slidesPerView;
+                    currentSlide = maxSlide; // Loop to end
+                }
+                updateSlider();
+            }
+            
+            function goToSlide(index) {
+                if (index >= 0 && index <= totalSlides - slidesPerView) {
+                    currentSlide = index;
+                    updateSlider();
+                }
+            }
+            
+            // Event listeners
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            // Auto-slide every 5 seconds
+            let slideInterval = setInterval(nextSlide, 5000);
+            
+            // Pause auto-slide on hover
+            const sliderContainer = document.querySelector('.testimonials-slider');
+            sliderContainer.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+            
+            sliderContainer.addEventListener('mouseleave', () => {
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+            
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                updateSlidesPerView();
+                createDots();
+                updateSlider();
+            });
+            
+            // Touch support for mobile
+            let startX = 0;
+            let endX = 0;
+            
+            track.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+            });
+            
+            track.addEventListener('touchend', (e) => {
+                endX = e.changedTouches[0].clientX;
+                const diff = startX - endX;
+                
+                if (Math.abs(diff) > 50) { // Minimum swipe distance
+                    if (diff > 0) {
+                        // Swipe left - next slide
+                        nextSlide();
+                    } else {
+                        // Swipe right - previous slide
+                        prevSlide();
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
